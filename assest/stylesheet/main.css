@@ -1,0 +1,451 @@
+:root {
+    --heading-color: #fff;
+    --btn-text-color: rgb(236, 235, 235);
+    --btn-background-color: rgb(63, 61, 61);
+
+}
+
+#container {
+    height: 100vh;
+    background-image: url(/assest/images/bg2.png);
+    background-size: 100% 100%;
+    /* background-repeat: no-repeat; */
+    padding: 20px 0px;
+
+}
+
+@media(max-width:768px) {
+    #conatiner {
+        padding: 0px;
+    }
+}
+
+#main-nav {
+    width: 1260px;
+    margin: 0 auto 20px;
+    background-color: black;
+}
+
+#main-nav ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+#main-nav ul li {
+    width: 100%;
+    text-align: center;
+}
+
+#main-nav ul li a:hover {
+    background-color: rgb(12, 209, 114);
+}
+
+@media(max-width:768px) {
+    #main-nav {
+        display: none;
+    }
+
+}
+
+#main-nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    background-color: rgb(69, 79, 159);
+    text-decoration: none;
+
+}
+
+.wrapper {
+    background-color: #2f2c2c;
+    /* position: absolute; */
+    margin: 0 auto;
+    width: 1160px;
+    height: calc(100vh - 100px);
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0px 0px 20px 2px rgb(81, 76, 76);
+
+
+}
+
+/* BREAKPOINTS 
+
+1400px-xxl
+1200px-xl
+992px-lg
+768px-md
+5576px-sm
+*/
+
+
+
+
+
+
+.wrapper>.row {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+@media(max-width: 1400px) {
+
+    .wrapper,
+    #main-nav {
+        width: 1160px;
+    }
+}
+
+
+@media(max-width: 1200px) {
+
+    .wrapper,
+    #main-nav {
+        width: 970px;
+    }
+}
+
+
+@media(max-width: 992px) {
+
+    .wrapper,
+    #main-nav {
+        width: 760px;
+    }
+}
+
+@media(max-width: 768px) {
+
+    .wrapper,
+    #main-nav {
+        width: 100%;
+    }
+}
+
+@media(max-width:768px) {
+    #main-nav ul li a span {
+        display: none;
+    }
+
+    .wrapper {
+        height: 100%;
+
+    }
+    .wrapper > .row{
+        position: static;
+        height: auto;
+        width: 100%;
+    }
+}
+
+.intro {
+    text-align: center;
+    height: 100%;
+    background-color: #494747;
+    color: white;
+    /* padding: 50px 0px; */
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.intro ul a {
+    color: white;
+}
+
+.intro ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.content {
+    position: relative;
+    overflow-x: hidden;
+    perspective: 400px;
+}
+
+.content>section {
+    overflow-y: scroll;
+}
+
+@media(max-width){
+    .content{
+        position: absolute;
+        top: 0px;
+        width: 100%;
+    }
+}
+
+#home {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    transition-duration: 1s;
+
+}
+
+#home h1 {
+    font-size: 3em;
+    color: white;
+}
+
+#home p {
+    color: #bcb7b7cf;
+    font-size: 2em;
+}
+
+@media(max-width:768px){
+    #home h1 {
+        font-size: 3em;
+        color: white;
+    }
+    
+}
+.height100 {
+    height: 100%;
+}
+
+#about,
+#skills,
+#projects,
+#contact {
+    position: absolute;
+    padding: 50px;
+    top: 0px;
+    z-index: 10;
+    height: 100%;
+    width: 80%;
+    background-color: rgb(32, 31, 31);
+    color: white;
+    transform: translateX(-100%) rotateY(180deg);
+    transition-duration: 1s;
+}
+
+#about h2,
+#skills h2,
+#projects h2,
+#contact h2 {
+    border-bottom: 2px solid rgb(73, 186, 48);
+    padding-bottom: 2%;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+#about p {
+    text-align: justify;
+}
+
+#about ul li span {
+    color: rgba(255, 166, 0, 0.827);
+    font-weight: bold;
+
+}
+
+#about ul li {
+    letter-spacing: 1px;
+}
+
+#about .icon {
+    color: yellow;
+    font-size: 2em;
+}
+
+#about h4 {
+    font-size: 1.5em;
+}
+
+.timeline {
+    position: relative;
+}
+
+.timeline .box {
+    /* background-color: #fff; */
+    color: rgb(39, 38, 38);
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    position: relative;
+    /* padding: 0px 50px; */
+
+}
+
+.timeline .box .inner-box {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.timeline .box.right {
+    left: 50%;
+    position: relative;
+    padding-left: 28px;
+
+}
+
+.timeline .box.left {
+    padding-left: 2.8px;
+}
+
+.timeline::after {
+    content: "";
+    height: 100%;
+    left: 50%;
+    top: 0%;
+    position: absolute;
+    border: 3px solid white;
+}
+
+.timeline .box:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    background-color: orange;
+
+    top: 20%;
+    z-index: 1;
+}
+
+.timeline .box.left::after {
+    right: -12px;
+
+}
+
+.timeline .box.right::after {
+    left: -8px;
+}
+
+.timeline .box::before {
+    content: "";
+    position: absolute;
+    /* margin-top: -10px; */
+    top: 20%;
+    z-index: 2;
+    border: 10px solid;
+
+
+}
+
+.timeline .box.left::before {
+    right: 0px;
+    border-color: transparent transparent transparent white;
+}
+
+.timeline .box.right::before {
+    left: 10px;
+    border-color: transparent white transparent transparent;
+}
+
+/* Skills */
+
+.skillset ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+
+
+
+.skillset ul li .a-80 {
+    width: 80%;
+}
+
+.skillset ul li .b-80 {
+    width: 60%;
+}
+
+.skillset ul li .c-80 {
+    width: 75%;
+}
+
+.skillset ul li .d-80 {
+    width: 70%;
+}
+
+.skillset ul li .bar {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 5px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+
+.skillset ul li span {
+    content: "";
+    position: absolute;
+    /* width:80%; */
+    height: 100%;
+    background-color: orange;
+    border-radius: 20px;
+    animation: progressbar 1s linear;
+}
+
+.skillset ul li span {
+
+    display: block;
+
+}
+
+@keyframes progressbar {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* Projects */
+
+#projects .card {
+    height: 100%;
+    color: black;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+#projects .card img {
+    transition-duration: 1s;
+
+}
+
+#projects .card:hover img {
+    transform: scale(1.5, 1.5);
+}
+
+#home.show,
+#about.show,
+#skills.show,
+#projects.show,
+#contact.show {
+    transform: translateX(0%) rotateY(0deg);
+    width: 100%;
+}
+
+/* @media(max-width:760px){
+#about,
+#skills,
+#projects,
+#contact{
+    margin-top: 20px;
+}
+} */
+
+
+
